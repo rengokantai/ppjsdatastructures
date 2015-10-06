@@ -28,3 +28,29 @@ LinkedList.prototype.add = function(data){
 
     return node;
 };
+
+
+LinkedList.prototype.delete = function(node){
+    if(this.length === 1){
+        return false;
+    }
+    if (node instanceof Node){
+        for(let _node = this.head; _node!==null;_node = _node.next ){
+            if(_node.next === node){
+                _node.next =node.next;
+                this.length -=1;
+                return true;
+            }
+        }
+    }else{
+        for(let _node = this.head; _node!==null;_node = _node.next ){
+            if(_node.next === this.tail){
+                _node.next =null;
+                this.tail = _node;
+                this.length -=1;
+                return true;
+            }
+        }
+    }
+    return false;
+}
