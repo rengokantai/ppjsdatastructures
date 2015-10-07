@@ -54,3 +54,9 @@ LinkedList.prototype.delete = function(node){
     }
     return false;
 }
+
+LinkedList.prototype.clear = function(){
+    this.length =0;
+    this.head = null;
+    this.tail = null;
+}
