@@ -60,3 +60,13 @@ LinkedList.prototype.clear = function(){
     this.head = null;
     this.tail = null;
 }
+
+
+LinkedList.prototype.has = function(node){
+    for(let _node = this.head; _node!==null;_node = _node.next ){
+        if(_node = node){
+            return true;
+        }
+    }
+    return false;
+}
