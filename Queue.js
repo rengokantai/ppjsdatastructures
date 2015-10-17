@@ -15,3 +15,11 @@ Queue.prototype.enqueue = function(item){
     this.length = 1;
     return this.items.push(item);
 }
+
+Queue.prototype.dequeue = function(){
+    if(this.length>0){
+        this.length-=1;
+    }
+    return this.items.shift();
+}
+
