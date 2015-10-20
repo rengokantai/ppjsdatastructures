@@ -5,3 +5,8 @@ function Stack(){
     this.items = [];
     this.length = this.items.length;
 }
+
+Stack.prototype.push = function(item){
+    this.length =1;
+    return this.items.push(item);
+}
