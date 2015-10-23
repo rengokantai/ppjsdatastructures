@@ -24,3 +24,4 @@ Stack.prototype.top = function(){
     }
     return undefined;
 }
+
