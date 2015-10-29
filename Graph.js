@@ -10,3 +10,9 @@ function Node(data){
     this.data = data;
     this.neighbours = [];
 }
+
+
+Graph.prototype.addNode = function(node){
+    this.nodes.push(node);
+    return ++this.length;
+}
