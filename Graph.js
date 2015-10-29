@@ -32,3 +32,28 @@ Graph.prototype.addEdge = function(nodeA, nodeB){
         nB[0].neighbours.push(nA[0]);
     }
 }
+
+//Create nodes
+var g = new Graph();
+
+g.addNode(new Node({
+    id:1,
+    articleId:100,
+    readBy:[{userId:10}]
+}))
+
+
+g.addNode(new Node({
+    id:2,
+    articleId:100,
+    readBy:[{userId:20}]
+}))
+
+g.addNode(new Node({
+    id:3,
+    articleId:100,
+    readBy:[{userId:10, userId:20}]
+}))
+
+
+g.addEdge(1,3);
